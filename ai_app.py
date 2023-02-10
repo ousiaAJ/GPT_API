@@ -24,7 +24,7 @@ def result():
 
 def gpt(auftrag):
   print("API started")
-  openai.api_key = "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"
+  openai.api_key = "<key>"
 
   response = openai.Completion.create(
     model="text-davinci-003",
