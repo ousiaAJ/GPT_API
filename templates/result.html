@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body style="background-color: skyblue;">
+    <h1 class="ui center aligned header" style="color: white;margin-top: 100px;">Text von GPT</h1>
+<div style ="margin-top: 50px; margin-bottom: 100px; width: 50%; color: green; background-color: black; border-style:solid; border-color: black; border-radius: 5px; padding:10px;" class="ui container">
+{{result | striptags}}
+
+</div>
+<div class="ui center aligned container">
+<button class="ui button"><a class="ui link" href="/">Neue Anfrage</a></button>
+</div>
+<footer class="ui vertical footer segment" style="position:fixed; bottom: 0px;">Source:<a href="https://openai.com/api/">&nbsp;openai api</a></footer>
+</body>
+</html>

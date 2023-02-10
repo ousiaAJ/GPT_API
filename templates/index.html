@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <style>
+        #ladebalken {
+          display: block;
+          background: skyblue;
+          width: 0.1em;
+          height: 2em;
+          border: thin solid skyblue;
+        }
+    </style>
+    <script type="text/javascript">
+        function loading() {
+            console.log("loading");
+    document.getElementById("info").innerHTML = "Ladestatus";
+    var ladebalken = document.getElementById('ladebalken');
+    ladebalken.animate(
+      [
+        {
+        width: '1em',
+        background: 'green'
+        }, {
+        width: '20em',
+        background: 'lime'
+        }
+      ], {
+      duration: 10000,
+      iterations: 1,
+      fill: 'forwards'
+        });
+     }
+
+    </script>
+    <title>GPT Writer</title>
+</head>
+<body style="background-color: skyblue; margin-left: 50px;">
+
+    <form action="/result" method="POST">
+        <h1 class="ui center aligned header" style="color: white;">GPT Text Writer</h1>
+        <br>
+        <label style ="color: red; font-size: large;">Welcher Text soll generiert werden?</label>
+        <br>
+        <div class="ui form">
+            <div class="field" style="margin-top:50px; width: 75%;">
+        <input type="text" name="textinput" placeholder="Welcher Text?">
+        <button class="ui button" style="margin-top: 50px;" type="submit" onclick="loading();">Los!</button>
+        </div>
+        </div>
+    </form>
+
+<div id="info" style="margin-top: 50px; color: white;"></div>
+<div id="ladebalken"></div>
+
+</body>
+<footer class="ui vertical footer segment" style="position:fixed; bottom: 0px;">Andreas Zineker - Filzengraben 12 - 50676 Köln</footer>
+</html>
